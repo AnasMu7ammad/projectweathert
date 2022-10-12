@@ -1,0 +1,340 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    background-image: url(./clear.jpg);
+    background-size: cover;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Side{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background:rgba(110, 110, 110, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1;
+    padding: 3em 2em;
+    }
+    .Sideform{
+        margin-bottom: 3em;
+    }
+.currentinfo{
+        right: 0;
+        flex-wrap: wrap;
+        color: #eee;
+        
+    }
+    .container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 2em 3em 4em 3em;
+    }
+    .container > div{
+        display: flex;
+        justify-content: center;
+        align-items: right;
+    }
+.date-container{
+        font-weight: 100;
+    }
+.date-container .time{
+        font-size: 3em;
+    }
+    
+.date-container #am-pm{
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+    
+.date-container .date{
+        font-size: 3rem;
+    }
+    .place-container{
+        text-align: center;
+       
+    }
+    
+    .place-container .time-zone{
+        font-size: 2rem;
+        font-weight: 100;
+    }
+    
+    .place-container .country{
+        font-size: 12px;
+        font-weight: 700;
+    }
+    
+    .currentinfo .others{
+        display: flex;
+        flex-direction: column;
+        background: rgba(24,24,27, 0.6);
+        padding:20px;
+        border-radius: 10px;
+        margin: 10px 0;
+        border: 1px solid #eee;
+    }
+    
+    .currentinfo .others .weather-item{
+        display: flex;
+        justify-content: space-between;
+    }
+.main{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+   
+
+}
+
+.City{
+     justify-content: space-between;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    text-shadow:   2px 4px 3px rgba(0,0,0,0.3)
+}
+
+.form{
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.form1{
+    width: 500px;
+    height: 100px;
+    background:rgba(110, 110, 110, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding:10px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+
+
+}
+.future-forecast{
+    background: rgba(24,24,27,0.8);
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    color:white;
+    width:80%;
+    direction: rtl;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.future-forecast .today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding:10px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2)
+}
+
+.future-forecast .today .day{
+    padding: 5px 5px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.future-forecast .today .temp{
+    font-size: 16px;
+    padding-top: 15px;
+}
+
+.future-forecast .weather-forecast{
+    display: flex;
+}
+
+.weather-forecast .weather-forecast-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2)
+}
+
+.weather-forecast .weather-forecast-item .day{
+    padding: 5px 15px;
+    background: #3C3C44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.weather-forecast .weather-forecast-item .temp{
+    font-weight: 100;
+    font-size: 12px;
+}
+
+/***********************************************/
+
+#weatherContainer{
+    background: rgba(24,24,27,0.8);
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    color:white;
+    width:80%;
+    direction: rtl;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+#iconsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding:10px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    border: 1px solid rgba(255, 255, 255, 0.3);;
+    padding: 0 5px 0 5px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2)
+}
+
+.image{
+    height: 140px;
+    width: 100%;
+}
+
+.imgClass{
+    height: 140px;
+    width: 100%;
+}
+
+.weather{
+    margin: 5px;
+   /*  background-color: rgb(106, 215, 255); */
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.minValues{
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    height: 25px;
+    width: 85px;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+
+.maxValues{
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    height: 25px;
+    width: 85px;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.submit{
+
+    padding: 0.5em;
+    margin: 0;
+    border: none;
+    background: #6c7ea0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.4s;
+}
+.submit:hover{
+    background:rgb(240, 239, 239) !important;
+    color: #6c7ea0;
+}
+.search{
+    background: none;
+    border: none;
+    border-bottom: 1px #ccc solid;
+    padding: 0.5em;
+    width: 80%;
+    color: #fff;
+    font-size: 1.2em;
+    backdrop-filter: blur(10px);
+}
+.search:focus { 
+    outline: none;
+}
+.search::placeholder{
+    color: #ccc;
+}
+@media only screen and (max-width: 1400px){
+    .future-forecast{
+        justify-content: start;
+        align-items: none;
+        overflow-x: scroll;
+    }
+}
+@media screen and (max-width:800px) {
+    .Panel1, .container{
+        position: relative;
+        width: 100%;
+        top:initial
+    }
+}
+@media screen and (max-height:500px) {
+    html{
+        font-size: 12px;
+    }
+}
+@media screen and(max-height:300px) {
+    .Weather-app{
+        min-height: 40em;
+    }
+}
